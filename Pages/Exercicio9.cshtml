@@ -1,0 +1,72 @@
+﻿@page
+@model TP1DR4DesWeb_2.Pages.SobreEstruturaModel
+@{
+    ViewData["Title"] = "Exercício 9";
+}
+
+<h1>Exploração da Estrutura de Projeto ASP.NET Core</h1>
+
+<div class="conteudo">
+    <section>
+        <h2>Qual a função da pasta Pages?</h2>
+        <p>
+            A pasta Pages contém todas as Razor Pages da aplicação.
+            E cada página possui dois arquivos: .cshtml e .cshtml.cs.
+        </p>
+    </section>
+
+    <section>
+        <h2>O que faz o arquivo Program.cs?</h2>
+        <p>
+            O arquivo Program.cs é o ponto de entrada da aplicação, o primeiro 
+            arquivo executado ao iniciar o aplicativo.
+            Ele configura o servidor web, define o pipeline de requisições
+            e como a aplicação será executada.
+        </p>
+    </section>
+
+    <section>
+        <h2>Onde são configurados os serviços da aplicação?</h2>
+        <p>
+            Os serviços são configurados dentro do Program.cs,
+            usando o método builder.Services.Add...<br />
+            Exemplos: autenticação, Entity Framework, Razor Pages.
+        </p>
+    </section>
+
+    <section>
+        <h2>Como é feito o roteamento de URLs?</h2>
+        <p>
+            O roteamento é feito automaticamente com base na localização dos arquivos
+            dentro da pasta Pages. Por exemplo:
+        </p>
+        <ul>
+            <li>Pages/Index.cshtml => URL /</li>
+            <li>Pages/Sobre.cshtml => URL /Sobre</li>
+            <li>Pages/Produtos/Lista.cshtml => URL /Produtos/Lista</li>
+        </ul>
+    </section>
+</div>
+
+<style>
+    .conteudo {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    section {
+        margin-bottom: 25px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+</style>

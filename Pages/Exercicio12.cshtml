@@ -1,0 +1,63 @@
+﻿@page
+@model TP1DR4DesWeb_2.Pages.Exercicio12Model
+@{
+    ViewData["Title"] = "Exercício 12";
+}
+
+<h1>Cadastro de Eventos</h1>
+
+<form method="post" class="formulario">
+    <div class="campo">
+        <label for="Titulo">Título:</label>
+        <input type="text" id="Titulo" name="Titulo" />
+    </div>
+
+    <div class="campo">
+        <label for="Data">Data:</label>
+        <input type="date" id="Data" name="Data" />
+    </div>
+
+    <div class="campo">
+        <label for="Local">Local:</label>
+        <input type="text" id="Local" name="Local" />
+    </div>
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+@if (Model.EventoCadastrado != null)
+{
+    <h2>Evento cadastrado:</h2>
+    <p><strong>Título:</strong> @Model.EventoCadastrado.Titulo</p>
+    <p><strong>Data:</strong> @Model.EventoCadastrado.Data.ToShortDateString()</p>
+    <p><strong>Local:</strong> @Model.EventoCadastrado.Local</p>
+}
+<style>
+    .formulario {
+        max-width: 400px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .campo {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 6px;
+        box-sizing: border-box;
+    }
+
+    button {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        background: #f5f5f5;
+        cursor: pointer;
+    }
+</style>

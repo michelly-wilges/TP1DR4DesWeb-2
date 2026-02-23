@@ -1,0 +1,17 @@
+﻿@page
+@model TP1DR4DesWeb_2.Pages.ProdutosModel
+@{
+    ViewData["Title"] = "Exercício 8";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista de Produtos</h1>
+    <br />
+    <ul>
+        @foreach (var produto in Model.Produtos)
+        {
+            <li>@produto.Nome - R$ @produto.Preco</li>
+        }
+    </ul>
+    <a asp-page="/Sobre">Ir para Sobre</a>
+</div>
